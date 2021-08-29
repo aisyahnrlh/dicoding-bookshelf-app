@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bookshelf Apps</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/bookshelf.css">
+</head>
+
+<body>
+    <header>
+        <nav class="head_bar">
+            <a href="index.html" class="head_bar__title">bookshelf</a>
+            <ul>
+                <li>
+                    <a href="search.html" title="Search">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24"
+                            height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <circle cx="10" cy="10" r="7"></circle>
+                            <line x1="21" y1="21" x2="15" y2="15"></line>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="bookshelf.html" title="My Bookshelves">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-book" width="24"
+                            height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path>
+                            <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path>
+                            <line x1="3" y1="6" x2="3" y2="19"></line>
+                            <line x1="12" y1="6" x2="12" y2="19"></line>
+                            <line x1="21" y1="6" x2="21" y2="19"></line>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="new-book.html" title="Add New Book">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-plus"
+                            width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                            <line x1="9" y1="12" x2="15" y2="12"></line>
+                            <line x1="12" y1="9" x2="12" y2="15"></line>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="s1__bookshelves">
+            <div class="s1__bookshelves_titles">
+                <div class="s1__bookshelves_title active isCompleteFalse">Belum selesai dibaca</div>
+                <div class="s1__bookshelves_title isCompleteTrue">Selesai dibaca</div>
+            </div>
+            <div class="books"></div>
+        </section>
+        <div class="deleteModals">
+            <div class="deleteModal">
+                <div class="deleteModal__title">Delete Books</div>
+                <div class="deleteModal__desc">Are you sure want to delete this book?</div>
+                <button class="deleteModal__buttonYes">Yes</button>
+                <button class="deleteModal__buttonNo">No</button>
+            </div>
+        </div>
+
+        <div class="editModals">
+            <div class="editModal">
+                <div class="editModal__title">Edit Books</div>
+                <form id="editBook">
+                    <div class="input">
+                        <label for="editBookTitle">Title</label>
+                        <input name="editBookTitle" id="editBookTitle" type="text" required
+                            placeholder="ex: The Fault in Our Stars">
+                    </div>
+                    <div class="input">
+                        <label for="editBookAuthor">Author</label>
+                        <input name="editBookAuthor" id="editBookAuthor" type="text" required
+                            placeholder="ex: John Green">
+                    </div>
+                    <div class="input">
+                        <label for="editBookYear">Year</label>
+                        <input name="editBookYear" id="editBookYear" type="number" required placeholder="ex: 2016">
+                    </div>
+                    <div class="input">
+                        <label for="editBookCategory">Category</label>
+                        <select name="editBookCategory" id="editBookCategory" class="editBookCategory" required>
+                            <option value="" selected>Choose a category...</option>
+                            <option value="Arts & Photography">Arts & Photography</option>
+                            <option value="Biographies & Memoirs">Biographies & Memoirs</option>
+                            <option value="Business & Money">Business & Money</option>
+                            <option value="Children's Book">Children's Book</option>
+                            <option value="Cookbooks, Food & Wine">Cookbooks, Food & Wine</option>
+                            <option value="Crafts, Hobbies & Home">Crafts, Hobbies & Home</option>
+                            <option value="Health, Fitness & Dieting">Health, Fitness & Dieting</option>
+                            <option value="Literature & Fiction">Literature & Fiction</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Science & Math">Science & Math</option>
+                            <option value="Self Help">Self Help</option>
+                        </select>
+                    </div>
+                    <div class="input">
+                        <label for="editBookImageUrl">Book Cover URL</label>
+                        <input name="editBookImageUrl" id="editBookImage" type="text" required
+                            placeholder="ex: https://images.unsplash.com/photo-1611077543575-445af69a7adf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80">
+                    </div>
+                    <button id="bookSubmit" type="submit" class="editModal__buttonYes">Save Changes</button>
+                    <button class="editModal__buttonNo">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="scripts/bookshelf.js" type="module"></script>
+</body>
+
+</html>

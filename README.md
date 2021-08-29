@@ -1,5 +1,4 @@
-# Dicoding Submission Aplikasi Pengelolaan Data Menggunakan DOM dan Web Storage
-
+# Dicoding Submission: Data Management Applications Using DOM and Web Storage
 This project was created to fulfill the requirements for passing the ![Learn to Create Web for Beginner](https://www.dicoding.com/academies/315) class in ![Dicoding](https://www.dicoding.com/). This project — bookshelf app — is a web app where users can add, search, and view list of books📚 and stored them in local storage.
 
 ## 🎯Table of Content

@@ -37,3 +37,5 @@ No packages included in this project. It consists only of HTML, CSS, and Javascr
 ## 🎯Installation
 
 To run this project, first clone this repo and open the folder with code editor.
+
+**Made with ❤️ by Aisyah Nurul Hidayah**
